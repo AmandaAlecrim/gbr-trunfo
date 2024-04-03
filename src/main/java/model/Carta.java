@@ -20,7 +20,7 @@ public class Carta {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "data_cadastro")
-    private Calendar dataCadastro;
+    private LocalDateTime dataCadastro;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "data_atualizacao")
@@ -66,11 +66,11 @@ public class Carta {
         this.velocidade = velocidade;
     }
 
-    public Calendar getDataCadastro() {
+    public LocalDateTime getDataCadastro() {
         return dataCadastro;
     }
 
-    public void setDataCadastro(Calendar dataCadastro) {
+    public void setDataCadastro(LocalDateTime dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
 
