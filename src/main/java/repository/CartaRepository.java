@@ -17,7 +17,7 @@ public class CartaRepository {
     private EntityManager em;
 
     public Integer inserir(Carta c) {
-        c.setDataCadastro(LocalDateTime.now());
+//        c.setDataCadastro(LocalDateTime.now());
         this.em.persist(c);
         return c.getId();
     }
@@ -27,7 +27,7 @@ public class CartaRepository {
     }
 
     public void atualizar(Carta c) {
-        c.setDataAtualizacao(LocalDateTime.now());
+//        c.setDataAtualizacao(LocalDateTime.now());
         em.merge(c);
     }
 

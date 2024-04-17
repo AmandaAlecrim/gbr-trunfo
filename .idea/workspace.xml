@@ -10,14 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="153a0baa-71ef-4522-87b6-c9abc705d08a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/deploy.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/filter/AuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/model/Carta.class" beforeDir="false" afterPath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/model/Carta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/repository/CartaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/repository/CartaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/app/GbrTrunfoApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/app/filter/AuthenticationFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/model/Carta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/model/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/model/dto/LoginDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/repository/CartaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/repository/UsuarioRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/repository/base/AbstractCrudRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/repository/utilitario/JwtRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/service/CartaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/classes/service/UsuarioService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/lib/jackson-annotations-2.12.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/lib/jackson-core-2.12.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/lib/jackson-databind-2.12.7.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/lib/jjwt-api-0.12.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/lib/jjwt-impl-0.12.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/lib/jjwt-jackson-0.12.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/servlet/container/deploy/directory/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/filter/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Carta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CartaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CartaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/utilitario/JwtRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/utilitario/JwtRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CartaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CartaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UsuarioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,20 +60,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/crv-prescricao&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/GitHub/gbr-trunfo/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 31.0.1.Final">
     <configuration name="JBoss/WildFly 31.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 31.0.1.Final" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER" value="false" />
@@ -159,6 +179,7 @@
       <workItem from="1710876590420" duration="8329000" />
       <workItem from="1712177514207" duration="600000" />
       <workItem from="1712231238199" duration="14000000" />
+      <workItem from="1713319797484" duration="7405000" />
     </task>
     <servers />
   </component>
@@ -180,19 +201,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/repository/utilitario/JwtRepository.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/repository/utilitario/JwtRepository.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/app/filter/AuthenticationFilter.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/main/java/repository/CartaRepository.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -5,6 +5,7 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import model.Usuario;
 import model.dto.LoginDTO;
+import model.dto.LoginResponseDTO;
 import repository.UsuarioRepository;
 import repository.utilitario.JwtRepository;
 
@@ -26,12 +27,14 @@ public class UsuarioService {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     @Path("/login")
-    public String login(LoginDTO dto) {
+    public LoginResponseDTO login(LoginDTO dto) {
         Usuario user = this.usuarioRepository.consultarPorLoginSenha(dto.getLogin(), dto.getSenha());
         if (user != null) {
-            return this.jwtRepository.gerarJwtParaUsuario(user);
+            LoginResponseDTO response = new LoginResponseDTO();
+            response.setAcessToken(this.jwtRepository.gerarJwtParaUsuario(user));
+            return response;
         } else {
             return null;
         }

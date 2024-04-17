@@ -7,6 +7,7 @@ import io.jsonwebtoken.security.Keys;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
 import model.Usuario;
+import model.dto.UserPrincipalDTO;
 import repository.UsuarioRepository;
 
 import java.util.Calendar;
@@ -21,17 +22,13 @@ public class JwtRepository {
     @EJB
     UsuarioRepository usuarioRepository;
 
-    public Usuario validarJwt(String jwt) {
+    public UserPrincipalDTO validarJwt(String jwt) {
         try {
             Claims claims = Jwts.parser()
                     .setSigningKey(Keys.hmacShaKeyFor(DEFAULT_SECRET.getBytes()))
                     .build()
                     .parseClaimsJws(jwt).getBody();
-
-            Integer id = claims.get("id", Integer.class);
-            System.out.println(Keys.hmacShaKeyFor(DEFAULT_SECRET.getBytes()));
-            Usuario user = this.usuarioRepository.consultar(id);
-            return user;
+            return UserPrincipalDTO.from(claims);
         } catch (Exception e) {
             System.err.println(e.getMessage());
             return null;

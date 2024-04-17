@@ -1,6 +1,7 @@
 package model;
 
 import jakarta.persistence.*;
+import model.dto.UserPrincipalDTO;
 
 @Entity
 @Table(name = "usuario")
@@ -13,6 +14,17 @@ public class Usuario {
     private String nome;
     private String login;
     private String senha;
+
+    public Usuario() {
+    }
+
+    public static Usuario from(UserPrincipalDTO dto) {
+        Usuario user = new Usuario();
+        user.setId(dto.getId());
+        user.setNome(dto.getNome());
+        user.setLogin(dto.getLogin());
+        return user;
+    }
 
     @Override
     public String toString() {

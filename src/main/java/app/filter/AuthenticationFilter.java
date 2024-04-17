@@ -1,11 +1,13 @@
 package app.filter;
 
+import app.security.TokenRequestWrapper;
 import jakarta.ejb.EJB;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Usuario;
+import model.dto.UserPrincipalDTO;
 import repository.utilitario.JwtRepository;
 
 import java.io.IOException;
@@ -32,17 +34,20 @@ public class AuthenticationFilter implements Filter {
                 jwt = jwt.substring(7);
                 System.out.println("VALIDANDO: " + jwt);
 
-                Usuario user = this.jwtRepository.validarJwt(jwt);
+                UserPrincipalDTO user = this.jwtRepository.validarJwt(jwt);
                 if (user != null) {
                     System.out.println("USUARIO do JWT: " + user.getLogin());
                     System.out.println("PERMITINDO ACESSO");
                     autenticado = true;
+
+                    TokenRequestWrapper requestWrapper = new TokenRequestWrapper(req, user);
+                    chain.doFilter(requestWrapper, response);
                 }
             }
         }
 
         //se não estiver, retorna não autorizado
-        if (autenticado || rotaAberta) {
+        else if (rotaAberta) {
             //continua a execução
             chain.doFilter(request, response);
         } else {

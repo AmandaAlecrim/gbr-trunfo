@@ -1,9 +1,13 @@
 package service;
 
 import jakarta.ejb.EJB;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import model.Carta;
+import model.Usuario;
+import model.dto.UserPrincipalDTO;
 import repository.CartaRepository;
 
 import java.util.List;
@@ -14,17 +18,25 @@ public class CartaService {
     @EJB
     CartaRepository cartaRepository;
 
+    @Context
+    HttpServletRequest request;
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
     public Integer inserir(Carta carta) {
+
+        // aqui eu pego o usuário LOGADO e seto como usuario cadastrante
+        UserPrincipalDTO principal = (UserPrincipalDTO) request.getUserPrincipal();
+        Usuario user = Usuario.from(principal);
+        carta.setUsuarioCadastrante(user);
         return this.cartaRepository.inserir(carta);
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}")
-    public Carta consultar( @PathParam("id") Integer id) {
+    public Carta consultar(@PathParam("id") Integer id) {
         return this.cartaRepository.consultar(id);
     }
 
@@ -36,7 +48,7 @@ public class CartaService {
 
     @DELETE
     @Path("/{id}")
-    public void remover( @PathParam("id") Integer id) {
+    public void remover(@PathParam("id") Integer id) {
         this.cartaRepository.remover(id);
     }
 

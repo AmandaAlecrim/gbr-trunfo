@@ -26,6 +26,10 @@ public class Carta {
     @Column(name = "data_atualizacao")
     private LocalDateTime dataAtualizacao;
 
+    @ManyToOne
+    @JoinColumn(name = "id_usuariocadastrante", referencedColumnName = "id")
+    public Usuario usuarioCadastrante;
+
     public int getId() {
         return id;
     }
@@ -80,5 +84,13 @@ public class Carta {
 
     public void setDataAtualizacao(LocalDateTime dataAtualizacao) {
         this.dataAtualizacao = dataAtualizacao;
+    }
+
+    public Usuario getUsuarioCadastrante() {
+        return usuarioCadastrante;
+    }
+
+    public void setUsuarioCadastrante(Usuario usuarioCadastrante) {
+        this.usuarioCadastrante = usuarioCadastrante;
     }
 }
